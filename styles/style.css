@@ -47,6 +47,7 @@ body{
 	border-radius:7px;
 }
 .search-container input[type=text]{
+	outline:none;
 	padding:0 0.5rem 0 0.5rem;
 	transition:0.3s;
 	width:30rem;
