@@ -60,10 +60,51 @@ body{
 	width:35rem;
 }
 .search-container input[type=submit]:hover{
+	cursor: pointer;
 	transition:0.3s;
-	filter:brightness(90%);
+	filter:brightness(70%);
 }
 .search-container input[type=submit]{
 	width:3rem;
 	font-size:1rem;
+}
+@media (max-width:600px) {
+	.search-container{
+		margin-top:15rem;
+		align-items: flex-start;
+	}
+	.search-container input[type=text]{
+		width:20rem;
+	}
+	.search-container input[type=text]:hover{
+		width:20rem;
+	}
+	.search-container input[type=text]:focus{
+		filter:brightness(70%);
+		transition:0.3s;
+	}
+}
+@media (max-width:400px) {
+	.search-container input[type=text]{
+		width:15rem;
+	}
+	.search-container input[type=text]:hover{
+		width:15rem;
+	}
+	.search-container input[type=text]:focus{
+		filter:brightness(70%);
+		transition:0.3s;
+	}
+}
+@media (max-width:350px) {
+	.search-container input[type=text]{
+		width:10rem;
+	}
+	.search-container input[type=text]:hover{
+		width:10rem;
+	}
+	.search-container input[type=text]:focus{
+		filter:brightness(70%);
+		transition:0.3s;
+	}
 }
