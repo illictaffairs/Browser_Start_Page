@@ -1,0 +1,68 @@
+:root, html[data-theme='light']{
+	--accent: /* your light color 1 */;
+	--dark: /* color 2 */;
+	--light: /* color 3 */;
+}
+
+html[data-theme='dark']{
+	--accent: /* your dark color 1 */ ;
+	--dark: /* color 2 */;
+	--light: /* color 3 */;	
+}
+*{
+	scroll-behavior: smooth;
+}
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+/*==============================*/
+body{
+	animation: background 50s infinite;
+	background: linear-gradient(221deg, #e88455, #d55959, #8bd559, #dfec78, #78ecd8, #787aec, #d778ec, #907a60, #d2d2d2);
+  background-size: 1800% 1800%;
+	height: 100vh;
+}
+@keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.search-container{
+	height:100%;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+  mix-blend-mode: overlay;
+}
+.search-container input{
+	transition:0.3s;
+	font-size:1.5rem;
+	height:3rem;
+	backdrop-filter: blur(110px);
+	border: none;
+	border-radius:7px;
+}
+.search-container input[type=text]{
+	padding:0 0.5rem 0 0.5rem;
+	transition:0.3s;
+	width:30rem;
+}
+.search-container input[type=text]:hover{
+	width: 32rem;
+}
+.search-container input[type=text]:focus{
+	transition:0.5s;
+	width:35rem;
+}
+.search-container input[type=submit]:hover{
+	transition:0.3s;
+	filter:brightness(90%);
+}
+.search-container input[type=submit]{
+	width:3rem;
+	font-size:1rem;
+}
