@@ -1,17 +1,22 @@
 :root, html[data-theme='light']{
-	--accent: /* your light color 1 */;
-	--dark: /* color 2 */;
-	--light: /* color 3 */;
+	--red: rgba(255,59,48,1);
+	--accent: rgba(175,82,222,1);
+	--gray6: rgba(242,242,247,0.7);
+	--gray: rgba(142,142,147,0.3);
+	--black: rgba(28,28,30);
 }
 
 html[data-theme='dark']{
-	--accent: /* your dark color 1 */ ;
-	--dark: /* color 2 */;
-	--light: /* color 3 */;	
+	--accent: rgba(191,90,242,1);
+	--red: rgba(255,69,58);
+	--gray: rgba(142,142,147,0.3);
+	--gray6: rgba(28,28,30);	
+	--black: rgba(242,242,247,0.7);
 }
 *{
 	scroll-behavior: smooth;
 }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 .material-symbols-rounded {
   font-variation-settings:
   'FILL' 1,
@@ -21,6 +26,7 @@ html[data-theme='dark']{
 }
 /*==============================*/
 body{
+	font-family: 'Inter', sans-serif;
 	animation: background 50s infinite;
 	background: linear-gradient(221deg, #e88455, #d55959, #8bd559, #dfec78, #78ecd8, #787aec, #d778ec, #907a60, #d2d2d2);
   background-size: 1800% 1800%;
@@ -68,6 +74,63 @@ body{
 	width:3rem;
 	font-size:1rem;
 }
+.settings-container{
+	pointer-events:none;
+	visibility: hidden;
+}
+.settings-container > not:(nothing){
+	pointer-events: auto;
+}
+.close-button{
+	transition:0.3s;
+	height:25px;
+	width:25px;
+	border-radius:100%;
+	margin:10px;
+	cursor: pointer;
+	background:var(--red);
+}
+.close-button:hover{
+	transform: scale(1.05, 1.05);
+}
+.sidebar ul li a{
+	padding:1rem;
+	font-weight: 500;
+	font-size:1.2rem;
+	display:flex;
+	text-decoration: none;
+	color: var(--black);
+	align-items: center;
+  justify-content: flex-start;
+}
+.pref{
+	color: var(--accent);
+}
+.sidebar{
+	position: fixed;
+	width:15rem;
+	height:100%;
+	background: var(--gray6);
+}
+.settings-container{
+	width:70rem;
+	height:45rem;
+	overflow:hidden;
+	border-radius:15px;
+	backdrop-filter: blur(80px);
+	background:var(--gray6);
+}
+.modal-settings{
+	z-index:11;
+	position: absolute;
+	display: flex;
+	width:100%;
+	height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+/* =========================================== */
 @media (max-width:600px) {
 	.search-container{
 		margin-top:15rem;
