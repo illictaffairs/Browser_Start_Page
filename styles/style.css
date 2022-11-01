@@ -37,7 +37,27 @@ body{
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+.header{
+	justify-content: flex-end;
+	position: absolute;
+	display: flex;
+	width:100vw;
+}
+.header input[type=button]{
+	background:none;
+	border: none;
+	transition:0.3s;
+	margin:1rem;
+	color: white;
+	mix-blend-mode: overlay;
+}
+.header input[type=button]{
+	cursor: pointer;
+	transform: scale(1.1, 1.1);
+	filter: brightness(90%);
+}
 .search-container{
+	z-index:15;
 	height:100%;
 	display: flex;
 	justify-content: center;
@@ -74,13 +94,6 @@ body{
 	width:3rem;
 	font-size:1rem;
 }
-.settings-container{
-	pointer-events:none;
-	visibility: hidden;
-}
-.settings-container > not:(nothing){
-	pointer-events: auto;
-}
 .close-button{
 	transition:0.3s;
 	height:25px;
@@ -114,14 +127,15 @@ body{
 }
 .settings-container{
 	width:70rem;
+	z-index:11;
 	height:45rem;
+	display: none;
 	overflow:hidden;
 	border-radius:15px;
 	backdrop-filter: blur(80px);
 	background:var(--gray6);
 }
 .modal-settings{
-	z-index:11;
 	position: absolute;
 	display: flex;
 	width:100%;

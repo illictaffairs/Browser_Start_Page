@@ -8,3 +8,8 @@ function change( LightDark )
     document.documentElement.getAttribute("data-theme");
         document.documentElement.setAttribute('data-theme', currentTheme === "light" ? "dark" : "light")
 }
+var setting = document.getElementById("settings");
+var settingWindow = document.getElementById("settings-container");
+function openSettings() {
+    settingWindow.style = ("display: block;");
+}
